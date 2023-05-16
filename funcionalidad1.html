@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Formulario de Contacto</title>
+  <style>
+    /* Estilos para el formulario */
+    .contact-form {
+      width: 400px;
+      margin: 0 auto;
+    }
+    .contact-form label {
+      display: block;
+      margin-bottom: 10px;
+    }
+    .contact-form input[type="text"],
+    .contact-form textarea {
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+    .contact-form button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+    }
+    .contact-form button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="contact-form">
+    <h2>Formulario de Contacto</h2>
+    <form>
+      <label for="name">Nombre:</label>
+      <input type="text" id="name" name="name">
+      
+      <label for="email">Correo electrónico:</label>
+      <input type="email" id="email" name="email" >
+      
+      <label for="message">Mensaje:</label>
+      <textarea id="message" name="message" ></textarea>
+      
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+</body>
+</html>
