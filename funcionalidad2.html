@@ -1,92 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Carrusel de Imágenes</title>
-  <style>
-    .carousel {
-      width: 500px;
-      margin: 0 auto;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .carousel-images {
-      display: flex;
-      transition: transform 0.3s ease-in-out;
-    }
-
-    .carousel-image {
-      max-width: 100%;
-    }
-
-    .carousel-prev,
-    .carousel-next {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      font-size: 2rem;
-      color: white;
-      background-color: rgba(0, 0, 0, 0.5);
-      padding: 10px;
-      text-decoration: none;
-      cursor: pointer;
-    }
-
-    .carousel-prev {
-      left: 10px;
-    }
-
-    .carousel-next {
-      right: 10px;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <header>
-    <center><h1>Noticias</h1></center>
+  <center>
+    <h1>Noticias</h1>
+  </center>
 </header>
+
 <body>
   <div class="carousel">
     <div class="carousel-images">
-      <img class="carousel-image" src="https://upload.wikimedia.org/wikipedia/commons/5/5b/ElTiempo1895.jpg" alt="Imagen 1">
-      <img class="carousel-image" src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Diario_Critica%2C_noticias_policiales_01.jpg" alt="Imagen 2">
-      <img class="carousel-image" src="https://upload.wikimedia.org/wikipedia/commons/9/9d/Noticia_del_fallecimiento_del_Arzobispo_Arboleda_1923.jpg" alt="Imagen 3">
+      <img class="carousel-image" src="https://upload.wikimedia.org/wikipedia/commons/5/5b/ElTiempo1895.jpg"
+        alt="Imagen 1">
+      <img class="carousel-image"
+        src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Diario_Critica%2C_noticias_policiales_01.jpg"
+        alt="Imagen 2">
+      <img class="carousel-image"
+        src="https://upload.wikimedia.org/wikipedia/commons/9/9d/Noticia_del_fallecimiento_del_Arzobispo_Arboleda_1923.jpg"
+        alt="Imagen 3">
     </div>
     <a class="carousel-prev">&#10094;</a>
     <a class="carousel-next">&#10095;</a>
   </div>
 
-  <script>
-    const carouselImages = document.querySelector('.carousel-images');
-    const prevButton = document.querySelector('.carousel-prev');
-    const nextButton = document.querySelector('.carousel-next');
-
-    let imageIndex = 0;
-    const images = carouselImages.querySelectorAll('.carousel-image');
-    const totalImages = images.length;
-    const imageWidth = images[0].clientWidth;
-
-    function showImage(index) {
-      carouselImages.style.transform = `translateX(-${index * imageWidth}px)`;
-    }
-
-    function prevImage() {
-      imageIndex = (imageIndex - 1 + totalImages) % totalImages;
-      showImage(imageIndex);
-    }
-
-    function nextImage() {
-      imageIndex = (imageIndex + 1) % totalImages;
-      showImage(imageIndex); 
-    }
-
-    prevButton.addEventListener('click', prevImage);
-    nextButton.addEventListener('click', nextImage);
-  </script>
+  <script src="script.js"></script>
 </body>
 <footer>
-    <center><a href="main.html">Regresar</a></center>
+  <center><a href="main.html">Regresar</a></center>
 </footer>
+
 </html>

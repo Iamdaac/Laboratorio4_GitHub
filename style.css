@@ -1,0 +1,70 @@
+/* Estilos para el formulario */
+.contact-form {
+    width: 400px;
+    margin: 0 auto;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.contact-form input[type="text"],
+.contact-form textarea {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+}
+
+.contact-form button:hover {
+    background-color: #45a049;
+}
+
+/*Fin de estilos para Formulario - Funcionalidad 1*/
+
+/*Inicio de estilo para Carrusel - Funcionalidad 2*/
+.carousel {
+    width: 500px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+}
+
+.carousel-image {
+    max-width: 100%;
+}
+
+.carousel-prev,
+.carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.carousel-prev {
+    left: 10px;
+}
+
+.carousel-next {
+    right: 10px;
+}
+
+/*Fin de Estilos para Carrusel - Funcionalidad 2*/
